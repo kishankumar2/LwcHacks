@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : Kishan Kumar
+  @group             : 
+  @last modified on  : 03-23-2023
+  @last modified by  : Kishan Kumar
+-->
+<template>
+
+   <template if:true={beerList}>
+    <div class="beersDiv"  style="overflow:scroll; height:400px;" onscroll={handleScroll1}>
+    <lightning-layout multiple-rows>
+    <template for:each={beerList} for:item="item">
+        <lightning-layout-item size="4" key={item.Id}>
+        <c-beer-tile2 beer-record={item}></c-beer-tile2>
+        </lightning-layout-item>
+    </template>
+    </lightning-layout>
+</div>
+   </template>
+
+   <template if:true={isLoading}>
+    <div>
+        <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+    </div>
+   </template>
+   
+
+</template>

@@ -1,0 +1,30 @@
+<template>
+       
+    <lightning-card title={beerRecord.Name}>
+        <p class="slds-p-horizontal_small">
+            <img src={beerRecord.Image__c} width="100" height="35" >
+        </p>
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12">
+                <div class="custom-box"><b>Beer ID:</b> {beerRecord.Id__c}</div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12"  >
+                <div class="custom-box"><b>Alchohal %:</b> {beerRecord.Alcohol__c}</div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12"  >
+                <div class="custom-box"><b>Price:</b> {beerRecord.Price__c}</div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12"  >
+                <div class="custom-box"><b>Brewery id:</b> {beerRecord.brewery_id__c}</div>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <div slot="footer">
+            <lightning-button variant="success" label="Add to Cart" title="Add to Cart" onclick={FunctionName}></lightning-button>
+            
+        </div>
+    </lightning-card>
+
+
+
+</template>
